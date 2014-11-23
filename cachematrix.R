@@ -1,7 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
+## These functions they allow us to set the inverse of a matrix in a different environment and cache it 
+## such as the next time that is called is used from the cached value and not calculated again. In order to do that we use m variable that is used in both functions using the <<- parameters
 
-## Write a short comment describing this function
+## This function creates a list from a matrix parameter that includes functions such as get the value of the matrix, set the inverse or get the inverse
+
 
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
@@ -18,7 +19,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## This function tries to get the inverse of the matrix from the parent environment and if it is, it uses that instead of calculating again the inverse
 
 cacheSolve <- function(x, ...) {
   m <- x$getinverse()
